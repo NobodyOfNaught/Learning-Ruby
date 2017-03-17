@@ -4,16 +4,17 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-$fibnum = 1
-$fibnumprevious = 1
-$sumevens = 0
+fibnum = 1
+fibnumprevious = 1
+sumevens = 0
 
-while $fibsum <= 40 do
-  $fibnumnew = $fibnum + $fibnumprevious
-  $fibnumprevious = $fibnum
-  $fibnum = $fibnumnew
-  if $fibsum % 2 == 0
-    $sumevens = $sumevens + $fibnum
-    puts "Sum of Even Fibonacci Numbers" {$sumevens}
+while fibnum <= 4000000 do
+  fibnumnew = fibnum + fibnumprevious
+  fibnumprevious = fibnum
+  fibnum = fibnumnew
+  puts fibnum
+  if fibnum % 2 == 0
+    sumevens = sumevens + fibnum
+    puts "Sum of Even Fibonacci Numbers #{sumevens}"
   end
 end
